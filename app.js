@@ -55,7 +55,7 @@ async function callYourselfToMaintainServerRunning() {
   axios.request(config)
   .then((response) => {
     console.log(JSON.stringify(response.data));
-    console.log('Hello Motherfucker... the time is '+ new Date())
+    console.log('Hello ... the time is '+ new Date())
   })
   .catch((error) => {
     console.log(error);
@@ -76,5 +76,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
 
 module.exports = app;
